@@ -1,6 +1,6 @@
-Rails.application.routes.draw do
+Rails.application.routes.draw do 
   devise_for :users
-  root 'pages#home'
+  root to: "pages#home"
   get "/about", to: 'pages#about'
   resources :contacts, only: :create 
   get "contact-us", to: "contacts#new", as: 'new_contact'
